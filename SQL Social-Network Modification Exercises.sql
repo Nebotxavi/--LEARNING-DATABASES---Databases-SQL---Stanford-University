@@ -27,7 +27,8 @@ WHERE Likes.ID1 = l1.ID2 AND
 Likes.ID2 = l1.ID1);
 
 #3 For all cases where A is friends with B, and B is friends with C, add a new friendship for the pair A and C. Do not add duplicate friendships, friendships that already exist, or friendships with oneself. (This one is a bit challenging; congratulations if you get it right.) 
- 
+
+INSERT INTO friend (ID1, ID2) 
 SELECT ID1, ID3
 FROM(
 SELECT DISTINCT h1.ID AS ID1, h3.ID AS ID3
